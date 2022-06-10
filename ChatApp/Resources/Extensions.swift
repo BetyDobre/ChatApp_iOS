@@ -28,8 +28,6 @@ extension UIView{
         return frame.size.width + frame.origin.x
     }
 
-
-
     public func showToast(controller: UIViewController, message : String, seconds: Double) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.view.backgroundColor = UIColor.black
@@ -42,10 +40,9 @@ extension UIView{
             alert.dismiss(animated: true)
         }
     }
-
 }
 
 extension Notification.Name{
-    //Notification when user logs in
+    // Notification when user logs in
     static let didLogInNotification = Notification.Name("didLogInNotification")
 }

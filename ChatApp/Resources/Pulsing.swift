@@ -10,7 +10,6 @@ class Pulsing: CALayer {
     var radius:CGFloat = 200
     var numberOfPulses:Float = Float.infinity
     
-    
     override init(layer: Any) {
         super.init(layer: layer)
     }
@@ -19,10 +18,8 @@ class Pulsing: CALayer {
         super.init(coder: aDecoder)
     }
     
-    
     init (numberOfPulses:Float = Float.infinity, radius:CGFloat, position:CGPoint) {
         super.init()
-        
         self.backgroundColor = UIColor.black.cgColor
         self.contentsScale = UIScreen.main.scale
         self.opacity = 0
@@ -52,13 +49,11 @@ class Pulsing: CALayer {
     }
     
     func createOpacityAnimation() -> CAKeyframeAnimation {
-        
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
         opacityAnimation.duration = animationDuration
         opacityAnimation.values = [0.4, 0.8, 0]
         opacityAnimation.keyTimes = [0, 0.2, 1]
     
-        
         return opacityAnimation
     }
     
@@ -71,7 +66,5 @@ class Pulsing: CALayer {
         self.animationGroup.timingFunction = defaultCurve
         
         self.animationGroup.animations = [createScaleAnimation(), createOpacityAnimation()]
-        
     }
-
 }

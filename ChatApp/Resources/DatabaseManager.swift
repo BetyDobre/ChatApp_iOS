@@ -6,7 +6,6 @@ import UserNotifications
 
 /// Manager object to read and write data to real time in Firebase database
 final class DatabaseManager {
-    
     public static let shared = DatabaseManager()
     private let database = Database.database().reference()
     
@@ -16,7 +15,6 @@ final class DatabaseManager {
         let safeEmail = email.replacingOccurrences(of: ".", with: ",")
         return safeEmail
     }
-    
 }
 
 extension DatabaseManager {

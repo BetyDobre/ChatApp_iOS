@@ -146,8 +146,7 @@ class ConversationsViewController: UIViewController {
         let email = DatabaseManager.safeEmail(email: result.email)
         
         //check in database if conversation with there two users exists
-        //if it does reuse conversation id
-        //otherwise use existing code
+        //if it does reuse conversation id, otherwise use existing code
         DatabaseManager.shared.conversationExists(with: email, completion: {[weak self] result in
             switch result {
             case .success(let conversationId):
@@ -166,7 +165,6 @@ class ConversationsViewController: UIViewController {
             }
         })
     }
-
 }
 
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {

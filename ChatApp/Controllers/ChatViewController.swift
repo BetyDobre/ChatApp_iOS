@@ -70,7 +70,7 @@ class ChatViewController: MessagesViewController {
         messageInputBar.setStackViewItems([button], forStack: .left, animated: false)
     }
     
-    //choose what to send
+    //choose what media type to send
     private func presentInputActionSheet () {
         let actionSheet = UIAlertController(title: "Attach Media", message: "What would you like to send?", preferredStyle: .actionSheet)
         
@@ -142,7 +142,6 @@ class ChatViewController: MessagesViewController {
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(actionSheet, animated: true)
-        
     }
     
     private func presentLocationPicker() {

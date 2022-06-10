@@ -308,6 +308,4 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         }
         imageView.image = selectedImage
     }
-    
 }
-
